@@ -1,5 +1,3 @@
-# React_Native_CodePush_Example
-
 How to Install and Use this Application on Mac using React Native CLI:
 
 1. If not already installed, install Homebrew:
@@ -43,5 +41,4 @@ How to Install and Use this Application on Mac using React Native CLI:
     ToDoCodePush.xcworkspace
 
 10. Make sure to open the .xcworkspace file NOT the .xcodeproj file. Otherwise the project will not be able to load the pod file dependencies and building the project will fail.
-
 
