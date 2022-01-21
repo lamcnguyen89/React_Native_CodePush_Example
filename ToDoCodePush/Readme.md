@@ -42,3 +42,7 @@ How to Install and Use this Application on Mac using React Native CLI:
 
 10. Make sure to open the .xcworkspace file NOT the .xcodeproj file. Otherwise the project will not be able to load the pod file dependencies and building the project will fail.
 
+11. For me to deploy, I use the command:
+
+    appcenter codepush release-react -a malneyugnfl/todocodepush -d Production
+
