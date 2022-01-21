@@ -2,10 +2,11 @@ import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 import Home from './pages/Home'
+import codePush from 'react-native-code-push';
 
-export default function App() {
+
+function App() {
   
   const Stack = createNativeStackNavigator();
 
@@ -17,3 +18,10 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+const codePushOptions = {
+  checkFrequency: codePush.CheckFrequency.ON_APP_START
+};
+
+export default codePush(codePushOptions)(App);
+
