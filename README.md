@@ -51,15 +51,21 @@ So far, the Codepush technology is designed for apps developed with the React-Na
 
 8. In the root of the project folder, navigate to the ios folder and open the file named ToDoCodePush.xcworkspace in XCode. Go to the 'Signing and Capabilities' menu for the project. Select your Team for the project. In order to add a team, you have to sign in with your apple account in XCode preferences.
 
-9. In the terminal, go back to the root of the project folder and run the project by typing in the terminal:
+9. From the Root of the folder, navigate to the iOS section and open the ToDoCodePush.xcworkspace file in XCode. As per the screenshot below, go to the "Signing and Capabilities" Section and make sure you have a Team selected. By default it will most likely be your Apple Account. 
+
+![Signing](ReadmeScreenshots/Signing.png)
+
+10. In the terminal, go back to the root of the project folder and run the project by typing in the terminal:
 
     react-native run-ios
 
-9. Another way to run the project is to go into the IOS folder in the root of the project and open the file named:
+11. Another way to run the project is to go into the IOS folder in the root of the project and open the file named:
 
     ToDoCodePush.xcworkspace
 
-10. Make sure to open the .xcworkspace file NOT the .xcodeproj file. Otherwise the project will not be able to load the pod file dependencies and building the project will fail.
+12. Make sure to open the .xcworkspace file NOT the .xcodeproj file. Otherwise the project will not be able to load the pod file dependencies and building the project will fail.
+
+
 
 ## How to convert a React-Native App to be able to use the Codepush Technology:
 
@@ -106,6 +112,77 @@ Store.
 3. Once you've selected the application environment, click on the settings icon on the right side of your dashboard to reveal your application's private keys:
 
 ![Private Keys](ReadmeScreenshots/PrivateKeys.png)
+
+
+## Adding Codepush to React-Native
+
+1. Go to the root of the React-Native application. You know you are in the root if you see a package.json file.
+
+2. Open a terminal in the root and use one if the commands below depending on which package manager you have installed on your system
+
+    ```
+    yarn add react-native-code-push
+
+    ```
+
+    ```
+    npm i --save react-native-code-push
+    ```
+
+3. Next we install Codepush pods into the native iOS project using the commands below
+
+```
+cd ios
+pod install 
+cd ..
+```
+
+4. Within the native iOS project, navigate to the "AppDelegate.m" file and import CodePush headers into your file:
+
+```
+import <CodePush/CodePush.h>
+```
+
+## Initializing CodePush in React Native
+
+To initialize Codepush, you wrap the root component with a higher order component provided by the CodePush Module. You can also a some different CodePush options, like the ability to display live updates to users.
+
+![Wrap Root Component](ReadmeScreenshots/WrapRootComponent.png)
+
+## Deploying App Updates with CodePush
+
+To release updates on a React Native app using CodePush, we have to install the App Center CLI package.
+
+1. Navigate to the root of your project where the "package.json" file is located, open a terminal in the root directory and enter one of the following commands depending on which package manager you are using:
+
+```
+yarn global add appcenter-cli
+```
+
+```
+npm install -g appcenter-cli
+```
+
+2. After installing the App Center CLI package, login using the command below:
+
+```
+appcenter login
+```
+
+3. Now we can release CodePush updates using the code below:
+
+```
+appcenter CodePush release-react -a {user}/{app name} -d {environment}
+```
+
+Note the "user" and "app name" can be found on the AppCenter. The "user" is most likely the login username when you log onto the AppCenter service. 
+
+The "Environment" is either Production, Staging etc... Look in the docs linked in the resources below.
+
+
+
+
+
 
 
 
