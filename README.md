@@ -1,5 +1,7 @@
 # React_Native_CodePush_Example
 
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+
 This application is a demonstration for the code required to use Codepush technologies. It is a simple To Do application designed in React-Native. However the codepush portion of the code can be applied to any app designed with React-Native.
 
 The following Document will discuss what Codepush is and how to implement it into an Application.
@@ -181,8 +183,37 @@ The "Environment" is either Production, Staging etc... Look in the docs linked i
 
 
 
+## Resources:
+
+- [The blogpost I used to help implement Codepush](https://blog.logrocket.com/implementing-codepush-react-native/)
+- [YouTube Video Series I used to help implement Codepush](https://www.youtube.com/watch?v=jEEPlqIcICM&list=PLucG_ap4OxzhOGhcO4pJxm-ojSV5LMHWi)
+- [Microsoft AppCenter](https://appcenter.ms)
+- [CodePush Documentation](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)
+- [The blogpost I used to help implement Codepush](https://blog.logrocket.com/implementing-codepush-react-native/)
 
 
+ 
+## Prerequisites and Deployment
+
+- Mac for Xcode and iOS testing
+- AppCenter login and Registration
+- Windows, Linux or Mac for React-Native Development
+
+## Built With
+
+- Xcode
+- React-Native
+- Visual Studio Code
+- Microsoft App Center
+
+
+## Author
+
+**Lam Nguyen**
+
+## License
+
+The Unlicense
 
 
 
