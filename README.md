@@ -2,7 +2,12 @@
 
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
-This application is a demonstration for the code required to use Codepush technologies. It is a simple To Do application designed in React-Native. However the codepush portion of the code can be applied to any app designed with React-Native. <br />
+This application is a demonstration for the code required to use Codepush technologies. It is a simple To Do application designed in React-Native. However the codepush portion of the code can be applied to any app designed with React-Native. 
+
+<br />
+
+![App Screenshot](ReadmeScreenshots/AppScreen.png)
+
 <br />
 
 The following Document will discuss what Codepush is and how to implement it into an Application.
