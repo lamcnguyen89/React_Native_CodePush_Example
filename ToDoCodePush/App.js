@@ -20,11 +20,8 @@ function App() {
 }
 
 const codePushOptions = {
-  checkFrequency: codePush.CheckFrequency.ON_APP_START,
-  mandatoryInstallMode: CodePush.InstallMode.IMMEDIATE,
-  updateDialog: {
-    appendReleaseDescription: true,
-    title: "a new update is available!"
+  checkFrequency: codePush.CheckFrequency.ON_APP_START
+
 };
 
 export default codePush(codePushOptions)(App);
